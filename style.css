@@ -1,0 +1,223 @@
+/*Thanks for this reference https://developer.mozilla.org/en-US/docs/Web/CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: rgb(9, 11, 26);
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+}
+
+.col-right {
+  background-repeat: no-repeat;
+  background-color: hsl(277, 64%, 61%);
+  background-blend-mode: overlay;
+  opacity: 0.4;
+  /* Fixing imagae 100% height */
+  height: 100%;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%); /* White */
+}
+
+.style {
+  color: hsl(277, 64%, 61%); /* Soft Violet */
+}
+
+.main-paragraph {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0rem 3rem 0rem 4rem;
+  line-height: 1.5;
+  color: hsla(0, 0%, 100%, 0.75); /* Slightly Transparent White */
+}
+
+.info-items {
+  color: hsl(0, 0%, 100%); /* White */
+  display: grid;
+}
+
+.stat-head1,
+.stat-head2,
+.stat-head3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 200%;
+  color: hsla(0, 0%, 100%, 0.6); /* Slightly transparent white */
+  letter-spacing: 0.2rem;
+}
+
+.col-left .info-items p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 70%;
+  color: hsl(0, 0%, 100%); /* White */
+  letter-spacing: 0.1rem;
+}
+.col-left .info-items span {
+  /*font-family: "Lexend Deca", sans-serif;*/
+  font-weight: 700;
+  font-size: 200%;
+  color: hsl(0, 0%, 100%); /* White */
+
+  letter-spacing: 0.1rem;
+}
+
+.companies,
+.templates,
+.queries {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 62.5%;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 375px) /* Mobile Version */ {
+  body {
+    padding: 2rem;
+  }
+
+  .container {
+    width: 100%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 0.6fr 1fr;
+  }
+
+  .col-right {
+    grid-row: 1 / 2;
+    background-image: url("images/image-header-mobile.jpg");
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .col-left {
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 0 0 5px 5px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 2rem 4rem;
+  }
+
+  .main-paragraph {
+    text-align: center;
+    margin: 1rem 3rem;
+  }
+
+  .info-items {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .companies,
+  .templates,
+  .queries {
+    margin: 1rem 10rem;
+    line-height: 1.75;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) /* Tablet Version */ {
+  .companies,
+  .templates,
+  .queries {
+    margin: 1rem 20rem;
+  }
+}
+
+@media screen and (min-width: 1025px) /* Desktop Version */ {
+  .container {
+    /* Center align container */
+    margin: 100px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* Width static margin */
+    width: 1090px;
+  }
+
+  .col-left {
+    margin: 0rem 1rem;
+    grid-column: 1 / 1;
+    grid-row: 1 / 4;
+  }
+
+  h1 {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    padding: 4rem 4rem 2.75rem 4rem;
+    text-align: left;
+    margin: 0;
+  }
+
+  .main-paragraph {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    text-align: left;
+    margin: 0 3rem 0 4rem;
+  }
+
+  .col-right {
+    background-image: url("images/image-header-desktop.jpg");
+    grid-column: 2 / 2;
+    grid-row: 1 / 4;
+    border-radius: 0 5px 5px 0;
+    width: 545px;
+    height: 450px;
+  }
+
+  .info-items {
+    margin: 4.267rem 1.067rem;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .companies,
+  .templates,
+  .queries {
+    margin: auto 3rem;
+    line-height: 1.75;
+  }
+
+  .companies {
+    margin: 0 2rem 0 3rem;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  .templates {
+    margin: 0 3rem 0 2rem;
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+  }
+
+  .queries {
+    margin: 0 4rem 0 1rem;
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+  }
+}
